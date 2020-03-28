@@ -123,6 +123,17 @@ class Database
 
         return $result;
     }
+
+    public function getLeaderboard()
+    {
+        $sql = $this->db->prepare('SELECT COUNT(r.id) as testsTaken, u.username, AVG(r.result) as averageScore FROM results as r LEFT JOIN users as u ON u.id = r.user WHERE r.result > 80 GROUP BY u.id ORDER BY testsTaken DESC, averageScore DESC LIMIT 5');
+        $sql->execute();
+        printf($sql->error);
+        $result = $sql->get_result();
+        $sql->close();
+
+        return $result;
+    }
 }
 
 $database = new Database();

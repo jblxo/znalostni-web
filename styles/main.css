@@ -1,0 +1,22 @@
+:root {
+    --color-primary: #E7F2F8;
+    --color-secondary: #74BDCB;
+    --color-salmon: #FFA384;
+    --color-biege: #EFE7BC;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    background-color: var(--color-primary);
+}
+
+main {
+    font-size: 1.6rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}

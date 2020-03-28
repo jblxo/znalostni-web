@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../styles/signup.css">
     <link rel="stylesheet" href="../styles/tests.css">
     <link rel="stylesheet" href="../styles/take_test.css">
+    <link rel="stylesheet" href="../styles/profile.css">
     <title>Quiz Web</title>
 </head>
 <body>
@@ -37,7 +38,10 @@
                     <a href="/tests.php">Tests</a>
                 </li>
                 <li class="menu-link">
-                    <a href="#">Leaderboard</a>
+                    <a href="/profile.php">Profile</a>
+                </li>
+                <li class="menu-link">
+                    <a href="/leaderboard.php">Leaderboard</a>
                 </li>
                 <li class="menu-link">
                     <a href="/signout.php">Sign out</a>

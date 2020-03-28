@@ -91,13 +91,37 @@ class Database
         return $result;
     }
 
-    public function insertTestResult($result, $user)
+    public function insertTestResult($result, $user, $test)
     {
-        $sql = $this->db->prepare('INSERT INTO results(result, user) VALUES (?, ?)');
-        $sql->bind_param('ii', $result, $user);
+        $sql = $this->db->prepare('INSERT INTO results(result, user, test) VALUES (?, ?, ?)');
+        $sql->bind_param('iii', $result, $user, $test);
         $sql->execute();
         printf($sql->error);
         $sql->close();
+    }
+
+    public function getProfile($user)
+    {
+        $sql = $this->db->prepare('SELECT firstName, lastName, username, note FROM users WHERE id = ?');
+        $sql->bind_param('i', $user);
+        $sql->execute();
+        printf($sql->error);
+        $result = $sql->get_result();
+        $sql->close();
+
+        return $result;
+    }
+
+    public function getUserResults($user)
+    {
+        $sql = $this->db->prepare('SELECT r.result, t.title, r.completedAt FROM results as r LEFT JOIN tests as t on t.id = r.test WHERE r.user = ?');
+        $sql->bind_param('i', $user);
+        $sql->execute();
+        printf($sql->error);
+        $result = $sql->get_result();
+        $sql->close();
+
+        return $result;
     }
 }
 

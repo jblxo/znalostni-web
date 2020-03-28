@@ -29,7 +29,7 @@ if (!empty($_POST['submit']) && !empty($_REQUEST['id'])) {
     }
 
     $rate = (100 * $correct) / $total;
-    $database->insertTestResult($rate, $_SESSION['idUser']);
+    $database->insertTestResult($rate, $_SESSION['idUser'], $_REQUEST['id']);
 
     echo 'Success rate: '.(100 * $correct) / $total.'%<br>';
     echo 'Correct: '.$correct;
@@ -38,6 +38,6 @@ if (!empty($_POST['submit']) && !empty($_REQUEST['id'])) {
 }
 ?>
 <br>
-<a href="/tests.php">Tests</a>
+<a href="/leaderboard.php">Leaderboard</a>
 </section>
 <?php include './templates/footer.php'; ?>

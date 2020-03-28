@@ -81,7 +81,7 @@ class Database
 
     public function getTestAnswers($idTest)
     {
-        $sql = $this->db->prepare('SELECT DISTINCT q.id, q.correctOptionIndex FROM tests as t INNER JOIN questions as q ON q.test = ?');
+        $sql = $this->db->prepare('SELECT DISTINCT q.id, q.title, q.option1, q.option2, q.option3, q.correctOptionIndex FROM tests as t INNER JOIN questions as q ON q.test = ?');
         $sql->bind_param('i', $idTest);
         $sql->execute();
         printf($sql->error);

@@ -23,6 +23,7 @@
             $hash = password_hash($password, PASSWORD_DEFAULT);
             $user = $database->signUp($firstName, $lastName, $username, $hash, $email, $note);
             $_SESSION['idUser'] = $user->id;
+            header('Location: http://localhost/profile.php');
         }
     }
 ?>

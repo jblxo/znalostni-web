@@ -29,6 +29,7 @@ if (!empty($_POST['submit']) && !empty($_REQUEST['id'])) {
     }
 
     $rate = (100 * $correct) / $total;
+    $database->insertTestResult($rate, $_SESSION['idUser']);
 
     echo 'Success rate: '.(100 * $correct) / $total.'%<br>';
     echo 'Correct: '.$correct;

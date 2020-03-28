@@ -90,6 +90,15 @@ class Database
 
         return $result;
     }
+
+    public function insertTestResult($result, $user)
+    {
+        $sql = $this->db->prepare('INSERT INTO results(result, user) VALUES (?, ?)');
+        $sql->bind_param('ii', $result, $user);
+        $sql->execute();
+        printf($sql->error);
+        $sql->close();
+    }
 }
 
 $database = new Database();

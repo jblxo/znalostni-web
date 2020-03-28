@@ -78,6 +78,18 @@ class Database
 
         return $result;
     }
+
+    public function getTestAnswers($idTest)
+    {
+        $sql = $this->db->prepare('SELECT DISTINCT q.id, q.correctOptionIndex FROM tests as t INNER JOIN questions as q ON q.test = ?');
+        $sql->bind_param('i', $idTest);
+        $sql->execute();
+        printf($sql->error);
+        $result = $sql->get_result();
+        $sql->close();
+
+        return $result;
+    }
 }
 
 $database = new Database();

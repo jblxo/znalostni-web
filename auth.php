@@ -1,5 +1,5 @@
 <?php
 
 if (!isset($_SESSION['idUser'])) {
-    header('Location: http://localhost/');
+    header('Location: http://localhost/nopermission.php');
 }

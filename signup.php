@@ -34,17 +34,17 @@
     echo $error;
 } ?></span>
         <label for="firstName">First name</label>
-        <input type="text" name="firstName" value="test" required>
+        <input type="text" name="firstName" required>
         <label for="lastName">Last name</label>
-        <input type="text" name="lastName" value="user" required>
+        <input type="text" name="lastName" required>
         <label for="username">Username</label>
-        <input type="text" name="username" value="username" required>
+        <input type="text" name="username" required>
         <label for="password">Password</label>
-        <input type="password" name="password" value="test" required>
+        <input type="password" name="password" required>
         <label for="passwordCheck">Password Check</label>
-        <input type="password" name="passwordCheck" value="test" required>
+        <input type="password" name="passwordCheck" required>
         <label for="email">Email</label>
-        <input type="email" name="email" value="test.user@address.com" required>
+        <input type="email" name="email" required>
         <label for="note">Note</label>
         <textarea name="note" id="note" cols="30" rows="10"></textarea>
         <input class="submit-btn" type="submit" name="submit" value="submit">

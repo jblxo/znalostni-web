@@ -20,9 +20,9 @@
     <h4 class="signup-heading">Sign In</h4>
     <form class="signup-form" action="signin.php" method="post">
         <label for="email">Email</label>
-        <input type="email" name="email" value="test.user@address.com" required>
+        <input type="email" name="email" required>
         <label for="password">Password</label>
-        <input type="password" name="password" value="test" required>
+        <input type="password" name="password" required>
         <input class="submit-btn" type="submit" name="submit" value="submit">
     </form>
 </section>

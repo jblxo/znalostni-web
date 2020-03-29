@@ -3,7 +3,7 @@
     require_once './server/Database.php';
 
     if (isset($_SESSION['idUser'])) {
-        header('Location: http://localhost/');
+        header('Location: https://quiz-web-maturita.herokuapp.com/');
     }
 
     $error = '';
@@ -23,7 +23,7 @@
             $hash = password_hash($password, PASSWORD_DEFAULT);
             $user = $database->signUp($firstName, $lastName, $username, $hash, $email, $note);
             $_SESSION['idUser'] = $user->id;
-            header('Location: http://localhost/profile.php');
+            header('Location: https://quiz-web-maturita.herokuapp.com/profile.php');
         }
     }
 ?>

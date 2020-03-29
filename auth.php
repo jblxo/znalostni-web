@@ -1,5 +1,5 @@
 <?php
 
 if (!isset($_SESSION['idUser'])) {
-    header('Location: http://localhost/nopermission.php');
+    header('Location: https://quiz-web-maturita.herokuapp.com/nopermission.php');
 }

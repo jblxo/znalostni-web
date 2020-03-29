@@ -4,4 +4,4 @@
     session_unset();
     session_destroy();
     $_SESSION = [];
-    header('Location: http://localhost/');
+    header('Location: https://quiz-web-maturita.herokuapp.com/');

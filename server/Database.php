@@ -3,10 +3,10 @@
 class Database
 {
     public $db;
-    private $host = 'localhost';
-    private $user = 'quiz_web';
-    private $pass = 'cisco';
-    private $database = 'quiz_web';
+    private $host = 'eu-cdbr-west-02.cleardb.net';
+    private $user = 'b011937dcea84c';
+    private $pass = '278e543d';
+    private $database = 'heroku_3640a77cf4d3ca0';
 
     public function __construct()
     {

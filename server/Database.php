@@ -44,8 +44,6 @@ class Database
         printf($sql->error);
         $result = $sql->get_result();
         $user = $result->fetch_object();
-        echo $user->password.'<br>';
-        echo $password.'<br>';
         if (!password_verify($password, $user->password)) {
             echo 'Wrong email or password!';
 
